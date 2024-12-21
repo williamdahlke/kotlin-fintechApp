@@ -5,15 +5,47 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="260dp"
+        android:layout_height="243dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_marginBaseline="36dp"
+        app:srcCompat="@drawable/fintech" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="262dp"
+        android:layout_height="79dp"
+        android:text="Cadastrar"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="318dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="262dp"
+        android:layout_height="79dp"
+        android:text="Extrato"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="397dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="262dp"
+        android:layout_height="79dp"
+        android:backgroundTint="#CCDE0405"
+        android:text="Sair"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="476dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
