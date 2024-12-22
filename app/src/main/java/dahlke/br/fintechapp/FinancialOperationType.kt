@@ -1,5 +1,9 @@
 package dahlke.br.fintechapp
 
-enum class FinancialOperationType {
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+enum class FinancialOperationType : Parcelable {
     CREDITO, DEBITO
 }

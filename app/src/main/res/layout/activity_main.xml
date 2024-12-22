@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivLogo"
         android:layout_width="260dp"
         android:layout_height="243dp"
         android:layout_marginTop="36dp"
@@ -18,34 +18,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_marginBaseline="36dp"
-        app:srcCompat="@drawable/fintech" />
+        app:srcCompat="@drawable/fintech"
+        android:contentDescription="@string/ivLogo"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnSave"
         android:layout_width="262dp"
         android:layout_height="79dp"
-        android:text="Cadastrar"
+        android:text="@string/btnSave"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="318dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnExtract"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnExtract"
         android:layout_width="262dp"
         android:layout_height="79dp"
-        android:text="Extrato"
+        android:text="@string/btnExtract"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="397dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnSair"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnSair"
         android:layout_width="262dp"
         android:layout_height="79dp"
         android:backgroundTint="#CCDE0405"
-        android:text="Sair"
+        android:text="@string/btnExit"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="476dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnExtract"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

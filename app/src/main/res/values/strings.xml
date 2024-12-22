@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FintechApp</string>
+    <string name="btnSave">Save</string>
+    <string name="btnExtract">Extract</string>
+    <string name="btnExit">Exit</string>
+    <string name="ivLogo">Fintech Logo</string>
 </resources>

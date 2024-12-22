@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FintechApp</string>
+    <string name="btnSave">Cadastrar</string>
+    <string name="btnExtract">Extrato</string>
+    <string name="btnExit">Sair</string>
+    <string name="ivLogo">Fintech Logo</string>
+</resources>
