@@ -5,4 +5,12 @@
     <string name="btnExtract">Extrato</string>
     <string name="btnExit">Sair</string>
     <string name="ivLogo">Fintech Logo</string>
+    <string name="tvCadActivityTitle">Cadastrar</string>
+    <string name="tvResumeCoin">R$</string>
+    <string name="tvDescription">Descrição</string>
+    <string name="tvDescriptionHint">Digite aqui uma descrição</string>
+    <string name="tvValue">Valor</string>
+    <string name="tvValueHint">Digite aqui um valor</string>
+    <string name="tvOperation">Operação</string>
+    <string name="btnBack">Voltar</string>
 </resources>
