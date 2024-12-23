@@ -12,4 +12,5 @@
     <string name="tvValueHint">Type here a value</string>
     <string name="tvOperation">Operation</string>
     <string name="btnBack">Back</string>
+    <string name="messageSaveError">It "isn't" possible to save this financial operation. Please check it!</string>
 </resources>

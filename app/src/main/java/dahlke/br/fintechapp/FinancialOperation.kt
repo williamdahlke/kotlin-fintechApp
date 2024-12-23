@@ -6,6 +6,6 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class FinancialOperation (
     val description : String,
-    val operationValue : Float,
+    val operationValue : Double,
     val operationType : FinancialOperationType) : Parcelable {
 }
