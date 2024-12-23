@@ -1,7 +1,5 @@
 package dahlke.br.fintechapp
 
-import android.app.Activity
-import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -28,6 +26,7 @@ class CadastrarActivity : AppCompatActivity() {
     private lateinit var btnSave : Button
     private lateinit var selectedOperationType : FinancialOperationType
     private lateinit var tvResumeValue : TextView
+    private lateinit var tvResumeCoin : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +44,7 @@ class CadastrarActivity : AppCompatActivity() {
         btnBack = findViewById(R.id.btnBack)
         btnSave = findViewById(R.id.btnSave)
         tvResumeValue = findViewById(R.id.tvResumeValue)
+        tvResumeCoin = findViewById(R.id.tvResumeCoin)
 
         val options = FinancialOperationType.entries.toList()
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, options)
@@ -86,9 +86,11 @@ class CadastrarActivity : AppCompatActivity() {
             if (selectedOperationType == FinancialOperationType.DEBITO){
                 (value * -1).toString().also { tvResumeValue.text = it }
                 tvResumeValue.setTextColor(Color.RED)
+                tvResumeCoin.setTextColor(Color.RED)
             } else{
                 value.toString().also { tvResumeValue.text = it }
                 tvResumeValue.setTextColor(Color.BLACK)
+                tvResumeCoin.setTextColor(Color.BLACK)
             }
         }
     }
