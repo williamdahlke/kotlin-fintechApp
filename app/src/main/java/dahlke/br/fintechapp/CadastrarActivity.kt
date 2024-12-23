@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.addTextChangedListener
+import java.util.ArrayList
 
 class CadastrarActivity : AppCompatActivity() {
     private val arrayListKey = "FINANCIAL_OPERATION_LIST"
@@ -27,6 +28,7 @@ class CadastrarActivity : AppCompatActivity() {
     private lateinit var selectedOperationType : FinancialOperationType
     private lateinit var tvResumeValue : TextView
     private lateinit var tvResumeCoin : TextView
+    private val financialOpList = ArrayList<FinancialOperation>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +48,8 @@ class CadastrarActivity : AppCompatActivity() {
         tvResumeValue = findViewById(R.id.tvResumeValue)
         tvResumeCoin = findViewById(R.id.tvResumeCoin)
 
+        hideResumeFields()
+
         val options = FinancialOperationType.entries.toList()
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, options)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -61,7 +65,9 @@ class CadastrarActivity : AppCompatActivity() {
         }
 
         btnBack.setOnClickListener {
-            this.setResult(RESULT_CANCELED, Intent())
+            val resultIntent = Intent()
+            resultIntent.putExtra(arrayListKey, financialOpList)
+            this.setResult(RESULT_OK, resultIntent)
             finish()
         }
 
@@ -74,15 +80,26 @@ class CadastrarActivity : AppCompatActivity() {
         }
 
         etValue.addTextChangedListener{
-            tvResumeValue.text = etValue.text
             setResumeValue()
         }
+    }
+
+    private fun hideResumeFields(){
+        tvResumeValue.visibility = View.GONE
+        tvResumeCoin.visibility = View.GONE
+    }
+
+    private fun showResumeFields(){
+        tvResumeValue.visibility = View.VISIBLE
+        tvResumeCoin.visibility = View.VISIBLE
     }
 
     private fun setResumeValue(){
 
         val value = etValue.text.toString().toDoubleOrNull()
         if (value != null){
+            showResumeFields()
+
             if (selectedOperationType == FinancialOperationType.DEBITO){
                 (value * -1).toString().also { tvResumeValue.text = it }
                 tvResumeValue.setTextColor(Color.RED)
@@ -108,11 +125,16 @@ class CadastrarActivity : AppCompatActivity() {
     }
 
     private fun saveItem(){
-        val financialOperation = FinancialOperation(etDescription.text.toString(), etValue.text.toString().toDouble(), selectedOperationType)
-        val resultIntent = Intent()
-        resultIntent.putExtra(arrayListKey, arrayListOf(financialOperation))
-        this.setResult(RESULT_OK, resultIntent)
-        finish()
+        financialOpList.add(FinancialOperation(etDescription.text.toString(), etValue.text.toString().toDouble(), selectedOperationType))
+        Toast.makeText(this, getString(R.string.messageSave), Toast.LENGTH_SHORT).show()
+        clearFields()
+    }
+
+    private fun clearFields(){
+        hideResumeFields()
+        etDescription.text.clear()
+        etValue.text.clear()
+        spOperation.setSelection(0)
     }
 }
 

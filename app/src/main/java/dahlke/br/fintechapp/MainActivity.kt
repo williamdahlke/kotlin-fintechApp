@@ -62,13 +62,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun openExtractActivity() {
         val intent = Intent(this, ExtratoActivity::class.java)
-        intent.putExtra("financialOpList", financialOpList)
+        intent.putExtra(arrayListKey, financialOpList)
         startActivity(intent)
     }
 
     private fun openSaveActivity(){
         val intent = Intent(this, CadastrarActivity::class.java)
-
         activityResultLauncher.launch(intent)
     }
 }

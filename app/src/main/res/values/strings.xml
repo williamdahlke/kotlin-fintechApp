@@ -13,4 +13,5 @@
     <string name="tvOperation">Operation</string>
     <string name="btnBack">Back</string>
     <string name="messageSaveError">It "isn't" possible to save this financial operation. Please check it!</string>
+    <string name="messageSave">"Financial Operation saved successfully!"</string>
 </resources>
