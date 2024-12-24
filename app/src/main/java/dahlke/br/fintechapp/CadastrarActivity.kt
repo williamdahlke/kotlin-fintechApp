@@ -65,9 +65,7 @@ class CadastrarActivity : AppCompatActivity() {
         }
 
         btnBack.setOnClickListener {
-            val resultIntent = Intent()
-            resultIntent.putExtra(arrayListKey, financialOpList)
-            this.setResult(RESULT_OK, resultIntent)
+            createIntentWithRetParams()
             finish()
         }
 
@@ -82,6 +80,18 @@ class CadastrarActivity : AppCompatActivity() {
         etValue.addTextChangedListener{
             setResumeValue()
         }
+    }
+
+    override fun onBackPressed() {
+        createIntentWithRetParams()
+        super.onBackPressed()
+    }
+
+
+    private fun createIntentWithRetParams(){
+        val resultIntent = Intent()
+        resultIntent.putExtra(arrayListKey, financialOpList)
+        this.setResult(RESULT_OK, resultIntent)
     }
 
     private fun hideResumeFields(){
