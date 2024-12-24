@@ -52,11 +52,9 @@
 
     <EditText
         android:id="@+id/etDescription"
-        android:layout_width="390dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
+        android:layout_margin="15dp"
         android:ems="10"
         android:hint="@string/tvDescriptionHint"
         android:importantForAutofill="no"
@@ -79,16 +77,17 @@
 
     <EditText
         android:id="@+id/etValue"
-        android:layout_width="390dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:layout_margin="15dp"
         android:ems="10"
         android:hint="@string/tvValueHint"
         android:importantForAutofill="no"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:textColorHint="@color/material_on_surface_emphasis_medium"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvValue" />
 
@@ -104,10 +103,10 @@
 
     <Spinner
         android:id="@+id/spOperation"
-        android:layout_width="390dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOperation" />
 
@@ -115,10 +114,10 @@
         android:id="@+id/btnSave"
         android:layout_width="320dp"
         android:layout_height="63dp"
-        android:layout_marginTop="172dp"
         android:text="@string/btnSave"
+        app:layout_constraintBottom_toTopOf="@+id/btnBack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spOperation"
         tools:ignore="DuplicateSpeakableTextCheck" />
@@ -127,10 +126,10 @@
         android:id="@+id/btnBack"
         android:layout_width="320dp"
         android:layout_height="63dp"
-        android:layout_marginTop="44dp"
         android:text="@string/btnBack"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSave" />
 
