@@ -15,4 +15,5 @@
     <string name="btnBack">Voltar</string>
     <string name="messageSaveError">"Não é possível salvar a operação financeira. Por favor, verifique!"</string>
     <string name="messageSave">"Operação financeira salva com sucesso!"</string>
+    <string name="tvExtractTitle">Extrato</string>
 </resources>
