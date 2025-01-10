@@ -10,6 +10,6 @@ data class FinancialOperation (
     val operationType : FinancialOperationType) : Parcelable {
 
     override fun toString(): String {
-        return "Description: $description, Type: $operationType, Value: $operationValue"
+        return "Description: $description, Type: ${operationType.toString().lowercase()}, Value: $operationValue"
     }
 }
