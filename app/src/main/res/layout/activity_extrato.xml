@@ -10,23 +10,47 @@
     <ListView
         android:id="@+id/lvFinancialOp"
         android:layout_width="400dp"
-        android:layout_height="771dp"
-        android:layout_marginTop="136dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="180dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBackExtract"
+        android:layout_width="320dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#CCDE0405"
+        android:text="@string/btnBackExtract"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvFinancialOp" />
 
     <TextView
         android:id="@+id/tvExtractTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="104dp"
         android:text="@string/tvExtractTitle"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/lvFinancialOp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="30dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/lvFinancialOp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvExtractTitle"
+        app:layout_constraintVertical_bias="0.261" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

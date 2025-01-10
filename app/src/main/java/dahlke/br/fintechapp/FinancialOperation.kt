@@ -6,7 +6,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class FinancialOperation (
     val description : String,
-    val operationValue : Double,
+    var operationValue : Double,
     val operationType : FinancialOperationType) : Parcelable {
 
     override fun toString(): String {
