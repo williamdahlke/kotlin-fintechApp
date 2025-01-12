@@ -23,7 +23,6 @@ class CadastrarActivity : AppCompatActivity() {
     private lateinit var etDescription : EditText
     private lateinit var etValue : EditText
     private lateinit var spOperation : Spinner
-    private lateinit var btnBack : Button
     private lateinit var btnSave : Button
     private lateinit var selectedOperationType : FinancialOperationType
     private lateinit var tvResumeValue : TextView
@@ -43,7 +42,6 @@ class CadastrarActivity : AppCompatActivity() {
         etDescription = findViewById(R.id.etDescription)
         etValue = findViewById(R.id.etValue)
         spOperation = findViewById(R.id.spOperation)
-        btnBack = findViewById(R.id.btnBack)
         btnSave = findViewById(R.id.btnSave)
         tvResumeValue = findViewById(R.id.tvResumeValue)
         tvResumeCoin = findViewById(R.id.tvResumeCoin)
@@ -64,11 +62,6 @@ class CadastrarActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
-        btnBack.setOnClickListener {
-            createIntentWithRetParams()
-            finish()
-        }
-
         btnSave.setOnClickListener {
             if (validateBeforeSave()){
                 saveItem()
@@ -86,7 +79,6 @@ class CadastrarActivity : AppCompatActivity() {
         createIntentWithRetParams()
         super.onBackPressed()
     }
-
 
     private fun createIntentWithRetParams(){
         val resultIntent = Intent()
