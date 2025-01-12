@@ -15,7 +15,6 @@ import java.util.Locale
 class ExtratoActivity : AppCompatActivity() {
 
     private lateinit var financialOpList : ArrayList<FinancialOperation>
-    private lateinit var btnBackExtract : Button
     private lateinit var tvBalance : TextView
     private lateinit var lvFinancialOp : ListView
     private val arrayListKey : String = "FINANCIAL_OPERATION_LIST"
@@ -28,11 +27,6 @@ class ExtratoActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-        }
-
-        btnBackExtract = findViewById(R.id.btnBackExtract)
-        btnBackExtract.setOnClickListener{
-            finish()
         }
 
         val bundle = intent.extras
